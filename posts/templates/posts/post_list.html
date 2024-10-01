@@ -1,0 +1,15 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+    <h1>Available Posts</h1>
+    <br>
+    <div class="posts">
+        {% for post in posts %}
+            <div class="post">
+                <h2><a href="{% url 'posts:display' slug=post.slug %}">{{ post.title }}</a></h2>
+                <p>{{ post.snipped_post }}</p>
+                <p>{{ post.date }}</p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

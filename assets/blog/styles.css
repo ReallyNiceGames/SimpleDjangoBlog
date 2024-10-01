@@ -1,0 +1,39 @@
+html{
+    height: 100%;
+}
+
+body{
+    /* Background image and default colour */
+    background-color: rgb(39, 160, 178);
+    background-image: url(nightsky.jpg);
+
+    height: 100%;
+
+    /* Centering and scaling the background */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+body *{
+    font-family: "Monaco";
+}
+
+h1{
+    font-weight: bold;
+    margin: 0;
+    color:#51b9f5
+}
+
+h2, h3, h4, h5{
+    font-weight: normal;
+    margin: 0;
+    text-decoration: underline;
+    text-decoration-color: #f82aac;
+}
+
+a, a:hover, a:visited{
+    color: #f82aac;
+    text-decoration: none;
+}
