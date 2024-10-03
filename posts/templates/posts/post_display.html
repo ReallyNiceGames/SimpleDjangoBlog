@@ -1,0 +1,14 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+<div class="post-display">
+    <div class="post">
+        <img src="{{ post.thumbnail.url }}" style="width: 20vw; height: 20vw;" />
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.body }}</p>
+        <p>{{ post.date }}</p>
+    </div>
+
+</div>
+
+{% endblock %}

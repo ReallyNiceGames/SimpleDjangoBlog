@@ -9,4 +9,7 @@ def post_list(request):
     return render(request, 'posts/post_list.html', {'posts': posts})
 
 def post_display(request, slug):
-    return HttpResponse(slug)
+    #return HttpResponse(slug)
+
+    post = Post.objects.get(slug=slug)
+    return render(request, 'posts/post_display.html', {'post': post})
