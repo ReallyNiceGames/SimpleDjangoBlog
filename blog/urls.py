@@ -21,13 +21,14 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from debug_toolbar.toolbar import debug_toolbar_urls
 from django.conf.urls.static import static
 from django.conf import settings
+from posts import views as post_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('users/', include('users.urls')),
     path('posts/', include('posts.urls')),
-    path('about/', views.about_page),
-    path('', views.home_page),
+    #path('about/', views.about_page),
+    path('', post_views.post_list, name="home"),
 ] + debug_toolbar_urls()
 
 urlpatterns += staticfiles_urlpatterns()
