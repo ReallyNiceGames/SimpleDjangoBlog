@@ -4,14 +4,14 @@ html{
 
 body{
     /* Background image and default colour */
-    background-color: rgb(39, 160, 178);
+    background-color: black;
     background-image: url(nightsky.jpg);
 
     height: 100%;
 
     /* Centering and scaling the background */
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat-x;
     background-size: cover;
     color: white;
 }
@@ -23,17 +23,161 @@ body *{
 h1{
     font-weight: bold;
     margin: 0;
-    color:#51b9f5
+    color:#51b9f5;
+}
+
+h2{
+    color: white;
 }
 
 h2, h3, h4, h5{
     font-weight: normal;
     margin: 0;
-    text-decoration: underline;
-    text-decoration-color: #f82aac;
 }
 
-a, a:hover, a:visited{
-    color: #f82aac;
+a{
+    color: #ff6686;
+}
+
+a.highlight{
+    color: #ff6686;
+    border: 1px solid;
     text-decoration: none;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+a:hover{
+    color: #51b9f5;
+}
+
+.wrapper{
+    max-width: 960px;
+    margin: 0 auto;
+    
+}
+
+div.wrapper h1{
+    text-align: center;
+    margin: 100px;
+    font-size: 2.4em;
+    
+}
+
+header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px 0;
+    
+}
+
+nav{
+    justify-self: end;
+}
+
+nav li{
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav button{
+    background: none;
+    color: #fff;
+    cursor: pointer;
+    border: 0;
+    font-size: 1em;
+}
+
+.posts{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+}
+
+.post{
+    padding: 10px;
+    border: 2px solid #e74163;
+    position: relative;
+    padding-bottom: 40px;
+}
+
+.post h2{
+    font-size: 1.4em;
+    text-shadow:
+        -0.03em 0 black,
+        0 -0.03em black;    
+}
+
+.post .author{
+    padding: 10px;
+    background: #e74163;
+    position:absolute;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    color: white;
+}
+
+.post-display .post{
+    padding: 0;
+}
+
+.post-display .post img{
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.post-display .post h2{
+    text-align: center;
+    margin: 20px;
+    font-size: 2em;
+}
+
+.post-display .post p{
+    text-align: center;
+    text-shadow:
+        -0.03em 0 black,
+        0 -0.03em black;
+}
+
+.site-form{
+    margin-top: 60px;
+    border: 2px solid #e74163;
+    padding: 20px;
+}
+
+.site-form input, .site-form textarea{
+    display: block;
+    margin: 20px 0 0 0;
+    padding: 10px;
+}
+
+.helptext, .helptext ul{
+    margin: 0 auto 20px;
+    color: #eee;
+    font-size: 1.0em;
+    display: block;
+}
+
+.errorlist li{
+    padding: 10px;
+    list-style-type: none;
+    border: 2px solid #ffc600;
+    color: #ffc600;
+    margin: 10px 0;
+}
+
+.errorlist{
+    padding: 0;
+}
+
+.site-form input[type="submit"]{
+    background: #51b9f5;
+    border: 0;
+    color: #111;
+    font-size: 1.2em;
+    border-radius: 4px;
+    margin: 10px 0;
 }

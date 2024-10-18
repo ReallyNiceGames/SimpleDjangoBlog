@@ -25,6 +25,7 @@ def post_create(request):
             postInstance = form.save(commit=False)
             postInstance.author = request.user
             postInstance.save()
+            postInstance.slug
             return redirect('posts:list')
     else:
         form = forms.CreatePost()
